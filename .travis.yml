@@ -1,0 +1,14 @@
+sudo: true
+
+jobs:
+  include:
+    - stage: build docker image
+      script:
+      - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+      - docker build -t $TRAVIS_COMMIT .
+      - docker images
+      - docker tag $TRAVIS_COMMIT $DOCKER_USERNAME/$TRAVIS_BRANCH:$TRAVIS_COMMIT
+      - docker push $DOCKER_USERNAME/$TRAVIS_BRANCH:$TRAVIS_COMMIT
+    - stage: test
+      script: docker run --rm $DOCKER_USERNAME/$TRAVIS_COMMIT cat hello.txt
+    - script: docker run --rm $DOCKER_USERNAME/$TRAVIS_COMMIT cat hello.txt
