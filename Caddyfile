@@ -1,0 +1,4 @@
+gomano.de
+gzip
+root /srv
+log stdout

@@ -14,4 +14,7 @@ RUN /hugo -s /gomano/ -d /site/
 FROM abiosoft/caddy
 
 COPY --from=builder /site/ /srv
+COPY Caddyfile /etc/Caddyfile
+
+
 
