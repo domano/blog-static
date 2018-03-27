@@ -5,5 +5,6 @@ docker tag $TRAVIS_COMMIT $DOCKER_USER/blog:$TRAVIS_BRANCH.$TRAVIS_COMMIT
 docker push $DOCKER_USER/blog:$TRAVIS_BRANCH.$TRAVIS_COMMIT
 if [[ $TRAVIS_BRANCH == 'master' ]]
 then
+  docker tag $TRAVIS_COMMIT $DOCKER_USER/blog:latest
   docker push $DOCKER_USER/blog:latest
 fi
