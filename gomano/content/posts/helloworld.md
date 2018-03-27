@@ -1,6 +1,10 @@
----
-
-
++++
+title = 'Hello World'
+slug = 'helloworld'
+image = 'images/pic03.jpg'
+date = "2017-04-22T00:00:00"
+description = 'Hello World'
++++
 ---
 
 <hr>

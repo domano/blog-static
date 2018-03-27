@@ -1,4 +1,5 @@
-baseURL = "http://example.org/"
+#baseURL = "http://example.org/"
+baseURL = ""
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "massively"
@@ -6,4 +7,4 @@ theme = "massively"
 [params.posts]
     foldername = "posts"
     pagesize = "6"
-    featuredpost = "true"
+    featuredpost = "false"
