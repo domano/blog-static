@@ -4,6 +4,6 @@ title = "My New Hugo Site"
 theme = "massively"
 
 [params.posts]
-    foldername = "post"
+    foldername = "posts"
     pagesize = "6"
     featuredpost = "true"
