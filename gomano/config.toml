@@ -1,7 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
-theme = "themes/massively"
+theme = "massively"
 
 [params.posts]
     foldername = "post"
