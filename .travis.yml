@@ -3,20 +3,7 @@ sudo: true
 jobs:
   include:
     - stage: build
-      - docker login -u="$DOCKER_USER" -p="$DOCKER_PASSWORD"
-      - docker build -t $TRAVIS_COMMIT .
-    - stage: tag
-      - docker tag $TRAVIS_COMMIT $DOCKER_USER/blog:$TRAVIS_BRANCH.$TRAVIS_COMMIT
-    - stage: push
-      - docker push $DOCKER_USER/blog:$TRAVIS_BRANCH.$TRAVIS_COMMIT
-    - stage: push latest
-      - docker push $DOCKER_USER/blog:latest
-
-stages:
-  - build
-  - tag
-  - push
-  - name: push latest
-    if: branch = master
+      script:
+        - ./travis-build.sh
 
 
