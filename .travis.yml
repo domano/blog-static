@@ -4,8 +4,8 @@ jobs:
   include:
     - stage: build docker image
       script:
-      - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+      - docker login -u="$DOCKER_USER" -p="$DOCKER_PASSWORD"
       - docker build -t $TRAVIS_COMMIT .
       - docker images
-      - docker tag $TRAVIS_COMMIT $DOCKER_USERNAME/$TRAVIS_BRANCH:$TRAVIS_COMMIT
-      - docker push $DOCKER_USERNAME/$TRAVIS_BRANCH:$TRAVIS_COMMIT
+      - docker tag $TRAVIS_COMMIT $DOCKER_USER/$TRAVIS_BRANCH:$TRAVIS_COMMIT
+      - docker push $DOCKER_USER/$TRAVIS_BRANCH:$TRAVIS_COMMIT
