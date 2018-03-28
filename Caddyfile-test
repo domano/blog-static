@@ -1,0 +1,4 @@
+localhost
+gzip
+root /srv
+log stdout

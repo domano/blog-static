@@ -2,3 +2,4 @@ gomano.de
 gzip
 root /srv
 log stdout
+tls angor.mail@googlemail.com
