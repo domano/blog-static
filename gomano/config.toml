@@ -1,7 +1,7 @@
 #baseURL = "http://example.org/"
-baseURL = "http://localhost:2015" # use address of caddy container
+baseURL = "https://gomano.de" # use address of caddy container
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "gomano - go and other stuff"
 theme = "massively"
 
 [params.posts]
