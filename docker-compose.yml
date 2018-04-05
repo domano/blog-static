@@ -1,8 +1,14 @@
-version: '3'
+version: '3.3'
 
 services:
     web:
         image: domano/blog
         ports:
-            -   80:80
-            -   443:443
+            - "80:80"
+            - "443:443"
+        volumes:
+            - blog_volume:/root/.caddy/
+        environment:
+            - ACME_AGREE=true
+volumes:
+    blog_volume:

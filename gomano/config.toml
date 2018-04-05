@@ -1,5 +1,5 @@
 #baseURL = "http://example.org/"
-baseURL = "https://gomano.de" # use address of caddy container
+baseURL = "https://gomano.de/" # use address of caddy container
 languageCode = "en-us"
 title = "gomano - go and other stuff"
 theme = "massively"
